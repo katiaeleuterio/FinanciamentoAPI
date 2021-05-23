@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FinanciamentoAPI.Controllers
@@ -26,6 +27,8 @@ namespace FinanciamentoAPI.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.Id = (context.Empresa.Select(x => x.Id).Any() ? context.Empresa.Select(x => x.Id).First() : 0) + 1 ;
+
                 context.Empresa.Add(model);
                 await context.SaveChangesAsync();
                 return model;

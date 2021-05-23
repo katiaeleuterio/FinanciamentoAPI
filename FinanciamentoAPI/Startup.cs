@@ -28,6 +28,11 @@ namespace FinanciamentoAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FinanciamentoAPI", Version = "v1" });
             });
+
+            services.AddCors(opt => 
+                opt.AddDefaultPolicy(
+                    builder => builder.AllowAnyOrigin()
+                ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,12 +49,14 @@ namespace FinanciamentoAPI
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
+            });            
         }
     }
 }

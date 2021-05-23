@@ -9,7 +9,7 @@ namespace FinanciamentoAPI.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
-        public string NomeEmpresa { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         public int QtdAnos { get; set; }
