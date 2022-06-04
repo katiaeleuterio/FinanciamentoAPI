@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BikeFit.Models
 {
-    public class AtletaDadosPessoais
+    public class AtletaDadosPessoaisModel
     {
         [Key]
         public int Id { get; set; }

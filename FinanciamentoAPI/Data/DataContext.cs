@@ -11,6 +11,8 @@ namespace BikeFit.Data
 
         }
 
-        public DbSet<AtletaDadosPessoais> DadosPessoais{ get; set; }
+        public DbSet<AtletaDadosPessoaisModel> DadosPessoais{ get; set; }
+
+        public DbSet<AtletaMedidasAntropometricasModel> MedidasAntropometricas{ get; set; }
     }
 }
