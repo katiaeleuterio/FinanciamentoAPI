@@ -1,7 +1,7 @@
-﻿using FinanciamentoAPI.Models;
+﻿using BikeFit.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinanciamentoAPI.Data
+namespace BikeFit.Data
 {
     public class DataContext : DbContext
     {
@@ -11,6 +11,6 @@ namespace FinanciamentoAPI.Data
 
         }
 
-        public DbSet<Empresa> Empresa { get; set; }
+        public DbSet<AtletaDadosPessoais> DadosPessoais{ get; set; }
     }
 }

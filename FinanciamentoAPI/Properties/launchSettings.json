@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "FinanciamentoAPI": {
+    "BikeFit": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
